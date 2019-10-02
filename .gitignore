@@ -1,2 +1,5 @@
 .sass-cache/
+*.scss
 *.css.map
+
+untracked/*
