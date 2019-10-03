@@ -458,7 +458,7 @@ body {
   font-family: "Avenir Next LT Pro - Demi", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, .h4, h5, h6 {
   text-align: center;
 }
 
@@ -478,9 +478,9 @@ h3 {
   line-height: 1.25;
 }
 
-h4 {
+h4, .h4 {
   font-family: "Avenir Next LT Pro - Demi Condensed", sans-serif;
-  font-size: 2em;
+  font-size: 1.75em;
   text-transform: uppercase;
 }
 
@@ -510,6 +510,8 @@ small, .small {
 }
 
 .text-container, .video-container {
+  margin: 0 auto;
+  max-width: 1300px;
   padding: 0 3%;
 }
 
@@ -574,10 +576,10 @@ header p {
   padding: 0 0.5em;
 }
 header p span {
-  background-color: #00c072;
+  background-color: #45bf76;
 }
 header .header__green {
-  background-color: #00c072;
+  background-color: #45bf76;
   bottom: 0;
   color: #fff;
   left: 0;
@@ -605,11 +607,11 @@ main section:first-child .img__price {
   transform: rotate(-18deg);
   width: 35%;
 }
-main section:first-child p:first-child {
+main section:first-child p:nth-child(odd) {
   padding: 1rem 0;
 }
 main section:nth-child(2) {
-  background-color: #00c072;
+  background-color: #45bf76;
   color: #fff;
 }
 main section:nth-child(2) > img {
@@ -647,7 +649,7 @@ main section:nth-child(2) .text-container--grey {
   padding: 0.75em;
 }
 main section:nth-child(2) .main__hero {
-  background-color: #00c072;
+  background-color: #45bf76;
   background-image: url("../assets/images/main-hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -655,23 +657,31 @@ main section:nth-child(2) .main__hero {
   position: relative;
   width: 100%;
 }
+main section:nth-child(2) .main__hero .text-container {
+  height: 100%;
+  width: 100%;
+}
 main section:nth-child(2) .main__hero .image-container {
   position: relative;
 }
-main section:nth-child(2) .main__hero .img__organicer {
+main section:nth-child(2) .main__hero .image-container--inner {
   left: 0;
-  max-width: 60%;
+  max-width: 450px;
   position: absolute;
-  top: -3.5em;
+  top: -3em;
+  width: 60%;
+}
+main section:nth-child(2) .main__hero .img__organicer {
+  display: block;
 }
 main section:nth-child(2) .main__hero .img__price {
-  left: 45%;
   position: absolute;
-  top: -4.5em;
+  right: -2.5em;
+  top: -1.5em;
   -webkit-transform: rotate(-18deg);
   -ms-transform: rotate(-18deg);
   transform: rotate(-18deg);
-  width: 35%;
+  width: 60%;
 }
 main section:nth-child(2) .main__hero .button-container {
   bottom: 2em;
@@ -680,7 +690,7 @@ main section:nth-child(2) .main__hero .button-container {
   width: 100%;
 }
 main section:nth-child(3) {
-  background-color: #00c072;
+  background-color: #45bf76;
   color: #fff;
 }
 main section:nth-child(3) > img {
@@ -690,7 +700,6 @@ main section:nth-child(3) .benefit {
   background-color: #d7d7dc;
   color: #2a3144;
   margin-bottom: 4em;
-  padding: 0 0.75em;
   position: relative;
 }
 main section:nth-child(3) .benefit--3 {
@@ -698,36 +707,28 @@ main section:nth-child(3) .benefit--3 {
 }
 main section:nth-child(3) .benefit h4 {
   background-color: #d7d7dc;
-  padding: 0.5em 0;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  -webkit-transform: translate(0, 1em);
-  -ms-transform: translate(0, 1em);
-  transform: translate(0, 1em);
+  padding: 0.5em 0.75rem 0;
+  -webkit-transform: translate(0, -1.25rem);
+  -ms-transform: translate(0, -1.25rem);
+  transform: translate(0, -1.25rem);
   width: 100%;
 }
 main section:nth-child(3) .benefit p {
   font-family: "Avenir Next LT Pro - Demi", sans-serif;
-  padding-top: 1.75em;
-}
-main section:nth-child(3) .benefit img {
-  display: block;
+  padding: 0 0.75rem;
 }
 main section:nth-child(3) .benefit .benefit-img {
-  padding: 0 0.75em;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-transform: translate(0, 1em);
-  -ms-transform: translate(0, 1em);
-  transform: translate(0, 1em);
+  display: block;
+  padding: 0 0.75rem;
+  -webkit-transform: translate(0, 1.25rem);
+  -ms-transform: translate(0, 1.25rem);
+  transform: translate(0, 1.25rem);
 }
 main section:nth-child(4) .gif {
   display: block;
 }
 main section.green-bg {
-  background-color: #00c072;
+  background-color: #45bf76;
   color: #fff;
 }
 main section.green-bg h3 {
@@ -747,8 +748,8 @@ main section:nth-child(6) .img__organicer {
   display: block;
 }
 main section:nth-child(6) .green-border {
-  border-top: 6px solid #00c072;
-  border-bottom: 6px solid #00c072;
+  border-top: 6px solid #45bf76;
+  border-bottom: 6px solid #45bf76;
   margin: 0.5em 0;
   padding: 0.375em 0.5em;
   text-align: center;
@@ -774,7 +775,7 @@ main section:nth-child(6) .flex-item {
   padding: 0 0.25em;
 }
 main section:nth-child(6) .flex-item span {
-  color: #00c072;
+  color: #45bf76;
   font-size: 7em;
 }
 main section:nth-child(6) .img__equation {
@@ -850,22 +851,46 @@ main section:nth-child(13) p:nth-child(2) {
 }
 main section:nth-child(15) {
   background-color: #fff;
+  border: 1px solid #fff;
   color: #fff;
 }
 main section:nth-child(15) .text-container {
+  text-align: center;
+}
+main section:nth-child(15) .green-border {
+  border-top: 6px solid #45bf76;
+  border-bottom: 6px solid #45bf76;
+  color: #2a3144;
+  margin: 0.5em 0;
+  padding: 0.375em 0.5em;
+  text-align: center;
+}
+main section:nth-child(16) {
+  background-color: #fff;
+  color: #fff;
+}
+main section:nth-child(16) .text-container {
   padding: 1em 3%;
   position: relative;
   text-align: center;
   text-transform: uppercase;
 }
-main section:nth-child(15) .testimonial {
+main section:nth-child(16) .green-border {
+  border-top: 6px solid #45bf76;
+  border-bottom: 6px solid #45bf76;
+  color: #2a3144;
+  margin: 0.5em 0;
+  padding: 0.375em 0.5em;
+  text-align: center;
+}
+main section:nth-child(16) .testimonial {
   bottom: 18%;
   height: 35%;
   left: 0;
   position: absolute;
   width: 100%;
 }
-main section:nth-child(15) .testimonial p:first-child {
+main section:nth-child(16) .testimonial p:first-child {
   font-family: "Avenir Next LT Pro - Condensed Italic", sans-serif;
   left: 0;
   line-height: 1.15;
@@ -874,7 +899,7 @@ main section:nth-child(15) .testimonial p:first-child {
   top: 0;
   width: 100%;
 }
-main section:nth-child(15) .testimonial p:nth-child(2) {
+main section:nth-child(16) .testimonial p:nth-child(2) {
   bottom: 0;
   font-family: "Avenir Next LT Pro - Demi Condensed Italic", sans-serif;
   font-weight: bold;
@@ -883,23 +908,23 @@ main section:nth-child(15) .testimonial p:nth-child(2) {
   position: absolute;
   width: 100%;
 }
-main section:nth-child(16) {
+main section:nth-child(17) {
   text-align: center;
 }
-main section:nth-child(16) .text-container {
+main section:nth-child(17) .text-container {
   padding: 0.5em 3%;
 }
-main section:nth-child(16) .green-border {
-  border-top: 6px solid #00c072;
-  border-bottom: 6px solid #00c072;
+main section:nth-child(17) .green-border {
+  border-top: 6px solid #45bf76;
+  border-bottom: 6px solid #45bf76;
   margin: 0.5em 0;
   padding: 0.375em 0.5em;
   text-align: center;
 }
-main section:nth-child(16) .green-border h3 {
+main section:nth-child(17) .green-border h3 {
   font-size: 1.5em;
 }
-main section:nth-child(16) p {
+main section:nth-child(17) p {
   padding: 0.75em 0;
 }
 
