@@ -506,7 +506,7 @@ small, .small {
 
 .site {
   background-color: #d7d7dc;
-  min-width: 328px;
+  min-width: 310px;
 }
 
 .text-container, .video-container {
@@ -738,9 +738,9 @@ main section:nth-child(5) h3 {
   font-size: 1.375em;
 }
 main section:nth-child(6) .image-container {
-  background-color: #bdc2c8;
+  background-color: #bcc1c7;
 }
-main section:nth-child(6) .image-container > div {
+main section:nth-child(6) .image-container--inner {
   margin: 0 auto;
   max-width: 937.5px;
 }
@@ -890,11 +890,14 @@ main section:nth-child(16) .testimonial {
   position: absolute;
   width: 100%;
 }
+main section:nth-child(16) .testimonial p {
+  font-size: 1em;
+}
 main section:nth-child(16) .testimonial p:first-child {
   font-family: "Avenir Next LT Pro - Condensed Italic", sans-serif;
   left: 0;
   line-height: 1.15;
-  padding: 0 10% 0.5em 6.5%;
+  padding: 0 10.25% 0.5em 6.75%;
   position: absolute;
   top: 0;
   width: 100%;
@@ -930,12 +933,16 @@ main section:nth-child(17) p {
 
 footer {
   padding: 1em 0;
+  text-align: center;
 }
 footer .logo {
   display: block;
   margin: 0 auto;
   max-width: 222px;
   width: 90%;
+}
+footer p {
+  font-size: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
