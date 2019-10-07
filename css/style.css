@@ -904,9 +904,8 @@ main section:nth-child(13) p:nth-child(2) {
   color: #ff0000;
 }
 main section:nth-child(15) {
-  background-color: #fff;
-  border: 1px solid #fff;
   color: #fff;
+  padding: 1em 0;
 }
 main section:nth-child(15) .green-border {
   border-top: 6px solid #45bf76;
@@ -917,7 +916,6 @@ main section:nth-child(15) .green-border {
   text-align: center;
 }
 main section:nth-child(16) {
-  background-color: #fff;
   color: #fff;
 }
 main section:nth-child(16) .testimonial-container {
