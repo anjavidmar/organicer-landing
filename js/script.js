@@ -1,3 +1,4 @@
+var docLang = document.documentElement.lang;
 var h = window.innerHeight;
 var header = document.getElementById('header');
 var header_h = 0;
@@ -25,10 +26,17 @@ if (h < 400) {
 }
 
 if (w > 584) {
-    headerHeroImg.src = './assets/images/header-hero.jpg';
-    mainHero_h = imageContainerInner_h * 1.25;
-    bestNewsText.innerHTML = "And the best news is,<br /> WE'RE GIVING IT TO YOU"
-    elevateText.innerHTML = 'Elevate your task management to a whole<br /> new level with our 2020 Organicer.';
+    if (docLang === 'de') {
+        headerHeroImg.src = '../assets/images/header-hero.jpg';
+        mainHero_h = imageContainerInner_h * 1.25;
+        bestNewsText.innerHTML = 'Und das Beste daran ist,<br /> WIR GEBEN IHNEN DIE 2019 EDITION'
+        elevateText.innerHTML = 'Steigern Sie Ihr Aufgabenmanagement mit unserem<br /> Organicer 2020 auf eine völlig neue Ebene.';
+    } else if (docLang === 'en') {
+        headerHeroImg.src = './assets/images/header-hero.jpg';
+        mainHero_h = imageContainerInner_h * 1.25;
+        bestNewsText.innerHTML = "And the best news is,<br /> WE'RE GIVING IT TO YOU"
+        elevateText.innerHTML = 'Elevate your task management to a whole<br /> new level with our 2020 Organicer.';
+    }
 }
 
 header.style.minHeight = header_h + 'px';

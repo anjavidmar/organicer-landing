@@ -543,6 +543,7 @@ small, .small {
   left: 50%;
   position: absolute;
   top: 50%;
+  text-align: center;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -574,6 +575,13 @@ header .logo {
   margin: 0 auto;
   max-width: 185px;
   width: 75%;
+}
+header .lang {
+  border-radius: 50%;
+  left: 1em;
+  position: absolute;
+  top: 1em;
+  width: 3em;
 }
 header .tagline-container {
   bottom: 10%;
@@ -642,6 +650,7 @@ main section:nth-child(2) .text-container__inner {
   max-width: 31.25em;
 }
 main section:nth-child(2) ul {
+  line-height: 1.15;
   margin: 0 auto;
   max-width: 18.5em;
   padding: 0.5em 0;
