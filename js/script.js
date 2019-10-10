@@ -10,7 +10,7 @@ var headerGreen_h = headerGreen.offsetHeight;
 var imageContainerInner = document.querySelector('.image-container__inner');
 var imageContainerInner_h = imageContainerInner.offsetHeight;
 var mainHero = document.querySelector('.main__hero');
-var mainHero_h = imageContainerInner_h * 1.5;
+var mainHero_h = imageContainerInner_h * 1.25;
 var mainHeroImg = document.getElementById('main-hero');
 var bestNewsText = document.querySelector('section:nth-child(12) h3');
 var elevateText = document.querySelector('section:nth-child(5) h3');
@@ -28,7 +28,7 @@ if (h < 400) {
 if (w > 584) {
     if (docLang === 'de') {
         headerHeroImg.src = '../assets/images/header-hero.jpg';
-        mainHero_h = imageContainerInner_h * 1.25;
+        mainHero_h = imageContainerInner_h * 1.15;
         bestNewsText.innerHTML = 'Und das Beste daran ist,<br /> WIR GEBEN IHNEN DIE 2019 EDITION'
         elevateText.innerHTML = 'Steigern Sie Ihr Aufgabenmanagement mit unserem<br /> Organicer 2020 auf eine völlig neue Ebene.';
     } else if (docLang === 'en') {
