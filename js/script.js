@@ -1,4 +1,3 @@
-var docLang = document.documentElement.lang;
 var h = window.innerHeight;
 var header = document.getElementById('header');
 var header_h = 0;
@@ -7,14 +6,13 @@ var headerHero_h = 0;
 var headerHeroImg = document.getElementById('header-hero');
 var headerGreen = document.querySelector('.header__green');
 var headerGreen_h = headerGreen.offsetHeight;
-var imageContainerInner = document.querySelector('.image-container__inner');
-var imageContainerInner_h = imageContainerInner.offsetHeight;
+var imageOrganicer = document.getElementById('img__organicer');
+var imageOrganicer_h = imageOrganicer.offsetHeight;
 var mainHero = document.querySelector('.main__hero');
-var mainHero_h = imageContainerInner_h * 1.25;
+var mainHero_h = 356.5;
 var mainHeroImg = document.getElementById('main-hero');
 var bestNewsText = document.querySelector('section:nth-child(12) h3');
 var elevateText = document.querySelector('section:nth-child(5) h3');
-var screen = document.getElementById('screen');
 var w = window.innerWidth;
 
 if (h < 400) {
@@ -26,18 +24,19 @@ if (h < 400) {
 }
 
 if (w > 584) {
-    if (docLang === 'de') {
-        headerHeroImg.src = '../assets/images/header-hero.jpg';
-        mainHero_h = imageContainerInner_h * 1.15;
-        bestNewsText.innerHTML = 'Und das Beste daran ist,<br /> WIR GEBEN IHNEN DIE 2019 EDITION'
-        elevateText.innerHTML = 'Steigern Sie Ihr Aufgabenmanagement mit unserem<br /> Organicer 2020 auf eine völlig neue Ebene.';
-    } else if (docLang === 'en') {
-        headerHeroImg.src = './assets/images/header-hero.jpg';
-        mainHero_h = imageContainerInner_h * 1.25;
-        bestNewsText.innerHTML = "And the best news is,<br /> WE'RE GIVING IT TO YOU"
-        elevateText.innerHTML = 'Elevate your task management to a whole<br /> new level with our 2020 Organicer.';
+    headerHeroImg.src = './assets/images/header-hero.jpg';
+    bestNewsText.innerHTML = "And the best news is,<br /> WE'RE GIVING IT TO YOU"
+    elevateText.innerHTML = 'Elevate your task management to a whole<br /> new level with our 2020 Organicer.';
+}
+
+if (imageOrganicer_h > 310) {
+    mainHero_h = imageOrganicer_h * 1.15;
+    if (w > 584) {
+        mainHero_h = imageOrganicer_h * 1.05;
     }
 }
+
+console.log('screen height = ' + h, 'screen width = ' + w);
 
 header.style.minHeight = header_h + 'px';
 headerHero.style.height = headerHero_h + 'px';
