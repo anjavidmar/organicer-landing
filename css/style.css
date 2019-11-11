@@ -170,6 +170,12 @@ small, .small {
 .cta-container {
   text-align: center;
 }
+.cta-container .img {
+  max-width: 485px;
+}
+.cta-container .button-container {
+  padding-bottom: 0 !important;
+}
 
 .button-container {
   padding: 1em 0;
@@ -213,6 +219,9 @@ small, .small {
   background-color: #fec349;
   border-radius: 2.625em;
   margin: 0 auto;
+}
+.button-container--pp--mobile {
+  padding-top: 0 !important;
 }
 .button-container--pp--mobile input[type=image] {
   padding: 0.75em 2.5em 0.5em;
