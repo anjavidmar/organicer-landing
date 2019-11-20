@@ -29,15 +29,20 @@ if (w > 584) {
     elevateText.innerHTML = 'Elevate your task management to a whole<br /> new level with our 2020 Organicer.';
 }
 
+// console.log(mainHero_h);
+
 if (imageOrganicer_h > 310) {
-    mainHero_h = imageOrganicer_h * 1.15;
-    if (w > 584) {
+    if (w < 585) {
+        mainHero_h = imageOrganicer_h * 1.15;
+        // console.log(mainHero_h);
+    } else {
         mainHero_h = imageOrganicer_h * 1.05;
+        // console.log(mainHero_h);
     }
 }
-
-console.log('screen height = ' + h, 'screen width = ' + w);
 
 header.style.minHeight = header_h + 'px';
 headerHero.style.height = headerHero_h + 'px';
 mainHero.style.height = mainHero_h + 'px';
+
+console.log('screen height = ' + h, 'screen width = ' + w);
